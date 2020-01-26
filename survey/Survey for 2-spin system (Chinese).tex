@@ -1,0 +1,63 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{color}
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\DeclareMathOperator{\prob}{Pr}
+\DeclareMathOperator{\expr}{\mathbf{E}}
+\DeclareMathOperator{\indi}{\mathbf{I}}
+\DeclareMathOperator{\var}{\mathbf{Var}}
+
+
+\newtheorem{defn}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\section{摘要}
+
+\subsection{铁磁性双自旋系统配分函数近似算法研究现状}
+     铁磁性双自旋系统配分函数的计算是统计物理，理论计算机，应用数学等领域的重要问题。本文目的在于完整地呈现
+    近似计算铁磁性双自旋系统配分函数的相关技术现状，以及指出该课题当前的一些开放性问题。本文首先介绍铁磁性
+    双自旋系统的配分函数的定义及其相关的采样问题。然后我们提出对该问题计算相变点的讨论，最后是对各种近似计算的
+    技术的讨论。
+
+\section{双自旋系统配分函数及其采样问题}
+    
+
+\section{近似算法技术}
+
+ $\indent$ It is well known that exact computation for the partition function of the spin system is $\#$P-hard\cite{phard},
+except for the very restricted settings.  Thus, we are 
+interested in the approximability of computing the partition function for spin system. We mainly focus on fully polynomial-time approximation scheme(FPTAS).
+\begin{defn}
+    \textbf{(FPTAS)} For any given parameter $\epsilon>0$, the algorithm outputs a number $\hat Z$ such that $Z_G \cdot e^{-\epsilon}\leq \hat Z \leq Z_G\cdot e^{\epsilon}$
+    and runs in time $poly(n,\frac{1}{\epsilon})$, where n is the size of G.
+\end{defn}
+
+The randomized relaxation of FPTAS is called fully polynomial-time randomized approximation scheme(FPRAS) defined as follows,
+
+\begin{defn}
+    \textbf{(FPRAS)} For any given parameter $\epsilon>0$, the algorithm outputs a number $\hat Z$ such that $Pr(Z_G \cdot e^{-\epsilon}\leq \hat Z \leq Z_G\cdot e^{\epsilon})\geq \frac{3}{4}$
+    and runs in time $poly(n,\frac{1}{\epsilon})$, where n is the size of G.
+\end{defn}
+
+\section{Counting and the Marginal probablity (q=2)}
+
+ 
+\bibliographystyle{plain}
+\bibliography{survey}
+\end{document}
